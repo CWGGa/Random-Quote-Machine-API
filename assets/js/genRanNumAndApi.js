@@ -25,6 +25,10 @@ $(document).ready(function () {
             var getQuote = data[getNumData]['text'];
             var getAuthor = data[getNumData]['author'];
 
+            if (getAuthor == null) {
+                getAuthor = 'Anonymous';
+            }
+
             $('#text').html(getQuote);
             $('#author').html(`- ${getAuthor}`);
             $('#tweet-quote').attr('href', `https://twitter.com/intent/tweet?text=${getQuote} -${getAuthor}`);
