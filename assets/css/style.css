@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'arima_madurailight';
+    src: url('../fonts/Arima Madurai/arimamadurai-light-webfont.woff2') format('woff2'),
+        url('../fonts/Arima Madurai/arimamadurai-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arima_maduraibold';
+    src: url('../fonts/Arima Madurai/arimamadurai-bold-webfont.woff2') format('woff2'),
+        url('../fonts/Arima Madurai/arimamadurai-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100%;
+}
+
+#welcome-section {
+    background-color: #16697A;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: bold;
+    color: #EDEDED;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#quote-box {
+    height: 65vh;
+    width: 100%;
+    background-color: #FFA62B;
+}
+
+.quote-text {
+    height: 70%;
+    width: 100%;
+    padding: 0% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1D1D1D;
+}
+
+.quote {
+    font-family: 'arima_maduraibold';
+    font-size: 200px;
+    height: 45%;
+}
+
+#text {
+    font-family: 'arima_madurailight';
+    font-size: 2rem;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.quote-author {
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0% 10%;
+    font-family: 'arima_madurailight';
+    font-size: 1.5rem;
+}
+
+.buttons {
+    height: 20%;
+    width: 100%;
+    padding: 0% 10%;
+    display: grid;
+    grid-template-columns: 5% 5% 2fr;
+    grid-template-rows: 1fr;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button_tonext {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#new-quote {
+    font-family: Arial;
+    font-size: 1.5rem;
+    padding: 1%;
+    background-color: #1D748A;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.59);
+    z-index: 4;
+    outline: none;
+    cursor: pointer;
+}
+
+#new-quote::hover() {
+    background-color: black;
+}
+
+.footer {
+    height: 10vh;
+    width: 100%;
+    background-color: #16697A;
+    box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.25);
+    color: #C1FFFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 1200px) {
+    .buttons {
+        grid-template-columns: 10% 10% 2fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #welcome-section {
+        font-size: 0.8rem;
+    }
+
+    .quote {
+        font-size: 150px;
+    }
+
+    #text {
+        font-size: 1.5rem;
+    }
+
+    #new-quote {
+        font-size: 1rem;
+        padding: 3%;
+    }
+
+    .buttons {
+        grid-gap: 10px;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #welcome-section {
+        font-size: 0.6rem;
+    }
+
+    .quote {
+        font-size: 7rem;
+    }
+
+    #text {
+        font-size: 1.2rem;
+    }
+
+    .quote-author {
+        font-size: 1.2rem;
+    }
+
+    #new-quote {
+        font-size: 1rem;
+        padding: 5%;
+    }
+
+    .buttons {
+        grid-template-columns: 13% 13% 2fr;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
